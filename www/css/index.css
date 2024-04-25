@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FFD700;
 }
 
 .container {
@@ -26,8 +27,8 @@ button {
     margin: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #FFD700;
-    color: #000;
+    background-color: #000000;
+    color: #FFD700;
     font-size: 16px;
     cursor: pointer;
 }
@@ -79,4 +80,18 @@ select {
 
 .menu-ativo {
     left: 0;
+}
+
+
+#logo {
+    width: 50%;
+    /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    /* Isso garante que a proporção da imagem seja mantida */
+    max-width: 100%;
+    /* Ajusta a largura máxima da imagem para garantir responsividade */
+    display: block;
+    /* Permite centralizar a imagem horizontalmente */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
 }
