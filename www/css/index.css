@@ -1,42 +1,82 @@
-* {
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: "Inter", sans-serif;
+    padding: 0;
 }
 
-.hidden {
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.esconder {
     display: none;
 }
 
-.page {
-    position: absolute;
+/* Estilos para os botões */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD700;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+    display: block;
     width: 100%;
-    height: 100%;
-    overflow: auto;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-#telaLogin {
-    background-color: #FFD700;
-}
-
-#telaUsuario {
-    background-color: #FFD700;
-}
-
-.navbar {
-    background-color: rgb(255, 255, 255);
-    width: 100;
-    height: 55;
-    text-align: center;
-
-}
-
-.navbar span {
-    font-size: 17px;
-    line-height: 55px;
-    color: rgb(143, 54, 54);
-    font-weight: bold;
-}
-
-.btnfooter {
+/* Estilos para o menu lateral */
+#menu-lateral {
     position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #FFD700;
+    padding-top: 20px;
+    transition: 0.5s;
+}
+
+#menu-lateral button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#menu-lateral button:hover {
+    background-color: #333;
+}
+
+.menu-ativo {
+    left: 0;
 }
