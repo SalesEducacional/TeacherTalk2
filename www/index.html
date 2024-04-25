@@ -23,91 +23,92 @@
             </div>
         </div>
         -->
-        <div id="tela-inicial" class="container">
-            <h1>Bem-vindo ao Teacher Talk</h1>
-            <button onclick="openLogin('professor')">Acesso Professor</button>
-            <button onclick="openLogin('aluno')">Acesso Aluno</button>
+
+    <div id="tela-inicial" class="container">
+        <h1>Bem-vindo ao Teacher Talk</h1>
+        <button onclick="openLogin('professor')">Acesso Professor</button>
+        <button onclick="openLogin('aluno')">Acesso Aluno</button>
+    </div>
+
+    <!-- Tela de Login -->
+    <div id="tela-login" class="container esconder">
+        <h1>Login</h1>
+        <input type="text" id="matricula" placeholder="Matrícula">
+        <input type="password" id="senha" placeholder="Senha">
+        <label for="lembrar-senha"><input type="checkbox" id="lembrar-senha"> Lembrar Senha</label>
+        <button onclick="simularLogin()">Login</button>
+        <button onclick="openCadastro()">Cadastrar</button>
+        <button onclick="voltarTelaInicial()">Voltar</button>
+    </div>
+
+    <!-- Tela Perfil Professor -->
+    <div id="perfil-professor" class="container esconder">
+        <h1>Perfil do Professor</h1>
+        <!-- Dados do professor -->
+        <div id="dados-professor">
+            <!-- Inserir os dados do professor aqui -->
         </div>
-    
-        <!-- Tela de Login -->
-        <div id="tela-login" class="container esconder">
-            <h1>Login</h1>
-            <input type="text" id="matricula" placeholder="Matrícula">
-            <input type="password" id="senha" placeholder="Senha">
-            <label for="lembrar-senha"><input type="checkbox" id="lembrar-senha"> Lembrar Senha</label>
-            <button onclick="simularLogin()">Login</button>
-            <button onclick="openCadastro()">Cadastrar</button>
-            <button onclick="voltarTelaInicial()">Voltar</button>
+        <!-- Menu Lateral -->
+        <div id="menu-lateral-professor">
+            <button>Home</button>
+            <button>Alterar Dados</button>
+            <button>Alterar Senha</button>
+            <button>Sobre</button>
+            <button>Suporte</button>
+            <button onclick="voltarTelaInicial()">Sair</button>
         </div>
-    
-        <!-- Tela Perfil Professor -->
-        <div id="perfil-professor" class="container esconder">
-            <h1>Perfil do Professor</h1>
-            <!-- Dados do professor -->
-            <div id="dados-professor">
-                <!-- Inserir os dados do professor aqui -->
-            </div>
-            <!-- Menu Lateral -->
-            <div id="menu-lateral-professor">
-                <button>Home</button>
-                <button>Alterar Dados</button>
-                <button>Alterar Senha</button>
-                <button>Sobre</button>
-                <button>Suporte</button>
-                <button onclick="voltarTelaInicial()">Sair</button>
-            </div>
-            <!-- Opções do App -->
-            <div id="opcoes-app-professor">
-                <button>Iniciar Transmissão</button>
-                <button>Aulas Salvas</button>
-                <button>Conecar Microfone</button>
-            </div>
+        <!-- Opções do App -->
+        <div id="opcoes-app-professor">
+            <button>Iniciar Transmissão</button>
+            <button>Aulas Salvas</button>
+            <button>Conecar Microfone</button>
         </div>
-    
-        <!-- Tela Perfil Aluno -->
-        <div id="perfil-aluno" class="container esconder">
-            <h1>Perfil do Aluno</h1>
-            <!-- Dados do aluno -->
-            <div id="dados-aluno">
-                <!-- Inserir os dados do aluno aqui -->
-            </div>
-            <!-- Menu Lateral -->
-            <div id="menu-lateral-aluno">
-                <button>Home</button>
-                <button>Alterar Dados</button>
-                <button>Alterar Senha</button>
-                <button>Sobre</button>
-                <button>Supor</button>
-                <button onclick="voltarTelaInicial()">Sair</button>
-            </div>
-            <!-- Opções do App -->
-            <div id="opcoes-app-aluno">
-                <button>Assistir Aula</button>
-                <button>Aulas Favoritas</button>
-            </div>
+    </div>
+
+    <!-- Tela Perfil Aluno -->
+    <div id="perfil-aluno" class="container esconder">
+        <h1>Perfil do Aluno</h1>
+        <!-- Dados do aluno -->
+        <div id="dados-aluno">
+            <!-- Inserir os dados do aluno aqui -->
         </div>
-    
-        <!-- Tela de Cadastro -->
-        <div id="tela-cadastro" class="container esconder">
-            <h1>Cadastro</h1>
-            <label for="tipo-cadastro">Selecione o tipo de cadastro:</label>
-            <select id="tipo-cadastro">
-                <option value="professor">Professor</option>
-                <option value="aluno">Aluno</option>
-            </select>
-            <input type="text" id="matricula-cadastro" placeholder="Matrícula">
-            <input type="email" id="email" placeholder="E-mail">
-            <input type="tel" id="telefone" placeholder="Telefone">
-            <input type="password" id="senha-cadastro" placeholder="Senha">
-            <input type="password" id="confirmar-senha" placeholder="Confirmar Senha">
-            <button onclick="simularCadastro()">Cadastrar</button>
-            <button onclick="voltarTelaLogin()">Voltar</button>
+        <!-- Menu Lateral -->
+        <div id="menu-lateral-aluno">
+            <button>Home</button>
+            <button>Alterar Dados</button>
+            <button>Alterar Senha</button>
+            <button>Sobre</button>
+            <button>Supor</button>
+            <button onclick="voltarTelaInicial()">Sair</button>
         </div>
-    
-    
+        <!-- Opções do App -->
+        <div id="opcoes-app-aluno">
+            <button>Assistir Aula</button>
+            <button>Aulas Favoritas</button>
+        </div>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="tela-cadastro" class="container esconder">
+        <h1>Cadastro</h1>
+        <label for="tipo-cadastro">Selecione o tipo de cadastro:</label>
+        <select id="tipo-cadastro">
+            <option value="professor">Professor</option>
+            <option value="aluno">Aluno</option>
+        </select>
+        <input type="text" id="matricula-cadastro" placeholder="Matrícula">
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="tel" id="telefone" placeholder="Telefone">
+        <input type="password" id="senha-cadastro" placeholder="Senha">
+        <input type="password" id="confirmar-senha" placeholder="Confirmar Senha">
+        <button onclick="simularCadastro()">Cadastrar</button>
+        <button onclick="voltarTelaLogin()">Voltar</button>
+    </div>
 
 
-   
+
+
+
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
 </body>
