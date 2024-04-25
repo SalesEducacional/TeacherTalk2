@@ -27,12 +27,26 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 }
-// Função para abrir a tela de login com base no tipo de usuário (professor ou aluno)
-function openLogin(tipoUsuario) {
-    // Oculta a tela inicial
-    document.getElementById('tela-inicial').classList.add('esconder');
-    // Mostra a tela de login correspondente ao tipo de usuário
-    document.getElementById('tela-login').classList.remove('esconder');
+function openLogin(userType) {
+    if (userType === 'professor' || userType === 'aluno') {
+        // Redirecionar para a tela de login correspondente
+        document.getElementById('tela-inicial').classList.add('esconder');
+        document.getElementById('tela-login').classList.remove('esconder');
+    } else {
+        console.error('Tipo de usuário inválido.');
+    }
+}
+
+function simularLogin(userType) {
+    if (userType === 'professor') {
+        // Redirecionar para o perfil do professor
+        document.getElementById('tela-login').classList.add('esconder');
+        document.getElementById('tela-perfil-professor').classList.remove('esconder');
+    } else if (userType === 'aluno') {
+        // Redirecionar para o perfil do aluno
+        document.getElementById('tela-login').classList.add('esconder');
+        document.getElementById('tela-perfil-aluno').classList.remove('esconder');
+    }
 }
 
 // Função para simular o login
@@ -66,7 +80,9 @@ function voltarTelaInicial() {
     document.getElementById('perfil-professor').classList.add('esconder');
     document.getElementById('perfil-aluno').classList.add('esconder');
     document.getElementById('tela-cadastro').classList.add('esconder');
+    document.getElementById('menu-lateral').classList.add('esconder');
     document.getElementById('tela-inicial').classList.remove('esconder');
+
 }
 
 // Função para voltar para a tela de login
@@ -75,3 +91,34 @@ function voltarTelaLogin() {
     document.getElementById('tela-cadastro').classList.add('esconder');
     document.getElementById('tela-login').classList.remove('esconder');
 }
+
+function exibirTela(idTela) {
+    // Oculta todas as telas, exceto a tela selecionada
+    var telas = document.querySelectorAll('.container');
+    for (var i = 0; i < telas.length; i++) {
+        telas[i].style.display = 'none';
+    }
+    document.getElementById(idTela).style.display = 'block';
+}
+
+function voltarTelaInicial() {
+    // Oculta todas as telas, exceto a tela inicial
+    var telas = document.querySelectorAll('.container');
+    for (var i = 0; i < telas.length; i++) {
+        telas[i].style.display = 'none';
+    }
+    document.getElementById('tela-inicial').style.display = 'block';
+}
+
+// Função para abrir ou fechar o menu
+function toggleMenu() {
+    var menu = document.getElementById("menu-lateral");
+    if (menu.classList.contains("fechado")) {
+        menu.style.left = "0";
+        menu.classList.remove("fechado");
+    } else {
+        menu.style.left = "-250px";
+        menu.classList.add("fechado");
+    }
+}
+
