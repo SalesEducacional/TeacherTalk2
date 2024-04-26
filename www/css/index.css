@@ -100,6 +100,7 @@ select {
 #menu-lateral li button:hover {
     text-decoration: solid;
     background-color: #000000;
+    color: #FFD700;
 }
 
 /* Estilos do ícone do menu */

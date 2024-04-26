@@ -87,9 +87,8 @@
         </div>
         <!-- Menu lateral -->
         <div id="menu-lateral" class="fechado">
-
             <ul>
-                <li><button onclick="exibirTela('tela-inicial')">Página Inicial</button></li>
+                <li><button onclick="voltarTelaInicial('tela-inicial')">Página Inicial</button></li>
                 <li><button onclick="exibirTela('tela-mudar-senha')">Alterar Dados</button></li>
                 <li><button onclick="exibirTela('tela-mudar-senha')">Alterar Senha</button></li>
                 <li><button onclick="exibirTela('tela-sobre')">Sobre</button></li>
@@ -112,54 +111,52 @@
         <div id="opcoes-app-professor">
             <button onclick="voltarTelaInicial()">Sair</button>
         </div>
+    </div>
 
-
-        <!-- Tela Perfil Aluno -->
-        <div id="perfil-aluno" class="container esconder">
-            <h1>Perfil do Aluno</h1>
-            <!-- Dados do aluno -->
-            <div id="dados-aluno">
-                <!-- Inserir os dados do aluno aqui -->
-            </div>
-            <!-- Menu Lateral -->
-            <div id="menu-lateral-aluno">
-                <button>Home</button>
-                <button>Alterar Dados</button>
-                <button>Alterar Senha</button>
-                <button>Sobre</button>
-                <button>Supor</button>
-                <button onclick="voltarTelaInicial()">Sair</button>
-            </div>
-            <!-- Opções do App -->
-            <div id="opcoes-app-aluno">
-                <button>Assistir Aula</button>
-                <button>Aulas Favoritas</button>
-            </div>
+    <!-- Tela Perfil Aluno -->
+    <div id="perfil-aluno" class="container esconder">
+        <h1>Perfil do Aluno</h1>
+        <!-- Dados do aluno -->
+        <div id="dados-aluno">
+            <!-- Inserir os dados do aluno aqui -->
         </div>
-
-        <!-- Tela de Cadastro -->
-        <div id="tela-cadastro" class="container esconder">
-            <h1>Cadastro</h1>
-            <label for="tipo-cadastro">Selecione o tipo de cadastro:</label>
-            <select id="tipo-cadastro">
-                <option value="professor">Professor</option>
-                <option value="aluno">Aluno</option>
-            </select>
-            <input type="text" id="matricula-cadastro" placeholder="Matrícula">
-            <input type="email" id="email" placeholder="E-mail">
-            <input type="tel" id="telefone" placeholder="Telefone">
-            <input type="password" id="senha-cadastro" placeholder="Senha">
-            <input type="password" id="confirmar-senha" placeholder="Confirmar Senha">
-            <button onclick="simularCadastro()">Cadastrar</button>
-            <button onclick="voltarTelaLogin()">Voltar</button>
+        <!-- Menu Lateral -->
+        <div id="menu-lateral-aluno">
+            <button>Home</button>
+            <button>Alterar Dados</button>
+            <button>Alterar Senha</button>
+            <button>Sobre</button>
+            <button>Supor</button>
+            <button onclick="voltarTelaInicial()">Sair</button>
         </div>
+        <!-- Opções do App -->
+        <div id="opcoes-app-aluno">
+            <button>Assistir Aula</button>
+            <button>Aulas Favoritas</button>
+        </div>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div id="tela-cadastro" class="container esconder">
+        <h1>Cadastro</h1>
+        <label for="tipo-cadastro">Selecione o tipo de cadastro:</label>
+        <select id="tipo-cadastro">
+            <option value="professor">Professor</option>
+            <option value="aluno">Aluno</option>
+        </select>
+        <input type="text" id="matricula" placeholder="Matrícula">
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="tel" id="telefone" placeholder="Telefone">
+        <input type="password" id="senha" placeholder="Senha">
+        <input type="password" id="confirmar-senha" placeholder="Confirmar Senha">
+        <button onclick="voltarTelaInicial()">Cadastrar</button>
+        <button onclick="voltarTelaInicial()">Voltar</button>
+    </div>
 
 
 
-
-
-        <script src="cordova.js"></script>
-        <script src="js/index.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

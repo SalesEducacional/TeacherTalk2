@@ -28,40 +28,39 @@ function onDeviceReady() {
     document.getElementById('deviceready').classList.add('ready');
 }
 function openLogin(userType) {
-    if (userType === 'professor' || userType === 'aluno') {
-        // Redirecionar para a tela de login correspondente
+    if (userType === 'professor') {
+        // Redirecionar para o perfil do professor
         document.getElementById('tela-inicial').classList.add('esconder');
-        document.getElementById('tela-login').classList.remove('esconder');
-    } else {
-        console.error('Tipo de usuário inválido.');
+        document.getElementById('tela-login-professor').classList.remove('esconder');
+    } else if (userType === 'aluno') {
+        // Redirecionar para o perfil do aluno
+        document.getElementById('tela-inicial').classList.add('esconder');
+        document.getElementById('tela-login-aluno').classList.remove('esconder');
     }
 }
 
 function simularLogin(userType) {
     if (userType === 'professor') {
         // Redirecionar para o perfil do professor
-        document.getElementById('tela-login').classList.add('esconder');
-        document.getElementById('tela-perfil-professor').classList.remove('esconder');
+        document.getElementById('tela-login-professor').classList.add('esconder');
+        document.getElementById('perfil-professor').classList.remove('esconder');
     } else if (userType === 'aluno') {
         // Redirecionar para o perfil do aluno
-        document.getElementById('tela-login').classList.add('esconder');
-        document.getElementById('tela-perfil-aluno').classList.remove('esconder');
+        document.getElementById('tela-login-aluno').classList.add('esconder');
+        document.getElementById('perfil-aluno').classList.remove('esconder');
     }
-}
-
-// Função para simular o login
-function simularLogin() {
-    // Aqui você pode adicionar a lógica para verificar as credenciais e redirecionar para a tela adequada
-    // Por enquanto, apenas redireciona para o perfil do professor para fins de demonstração
-    document.getElementById('tela-login').classList.add('esconder');
-    document.getElementById('perfil-professor').classList.remove('esconder');
 }
 
 // Função para abrir a tela de cadastro
 function openCadastro() {
-    // Oculta a tela de login
-    document.getElementById('tela-login').classList.add('esconder');
-    // Mostra a tela de cadastro
+    // Esconder a tela de login do professor
+    document.getElementById('tela-login-professor').classList.add('esconder');
+    // Esconder a tela de login do aluno, se estiver visível
+    document.getElementById('tela-login-aluno').classList.add('esconder');
+    document.getElementById('perfil-professor').classList.add('esconder');
+    document.getElementById('perfil-aluno').classList.add('esconder');
+
+    // Mostrar a tela de cadastro
     document.getElementById('tela-cadastro').classList.remove('esconder');
 }
 
@@ -76,13 +75,13 @@ function simularCadastro() {
 // Função para voltar para a tela inicial
 function voltarTelaInicial() {
     // Oculta todas as outras telas e mostra a tela inicial
-    document.getElementById('tela-login').classList.add('esconder');
+    document.getElementById('tela-login-aluno').classList.add('esconder');
+    document.getElementById('tela-login-professor').classList.add('esconder');
     document.getElementById('perfil-professor').classList.add('esconder');
     document.getElementById('perfil-aluno').classList.add('esconder');
     document.getElementById('tela-cadastro').classList.add('esconder');
     document.getElementById('menu-lateral').classList.add('esconder');
     document.getElementById('tela-inicial').classList.remove('esconder');
-
 }
 
 // Função para voltar para a tela de login
@@ -99,15 +98,6 @@ function exibirTela(idTela) {
         telas[i].style.display = 'none';
     }
     document.getElementById(idTela).style.display = 'block';
-}
-
-function voltarTelaInicial() {
-    // Oculta todas as telas, exceto a tela inicial
-    var telas = document.querySelectorAll('.container');
-    for (var i = 0; i < telas.length; i++) {
-        telas[i].style.display = 'none';
-    }
-    document.getElementById('tela-inicial').style.display = 'block';
 }
 
 // Função para abrir ou fechar o menu
