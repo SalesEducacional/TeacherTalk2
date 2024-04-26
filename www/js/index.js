@@ -159,6 +159,11 @@ function exibirTela(idTela) {
         telas[i].classList.add('esconder');
     }
     document.getElementById(idTela).classList.remove('esconder');
+
+    if (idTela === 'perfil-professor' || idTela === 'perfil-aluno') {
+        // Fechar o menu lateral
+        document.getElementById('menu-lateral').classList.add('fechado');
+    }
 }
 
 function abrirTelaAlterarDados() {
@@ -172,10 +177,7 @@ function abrirTelaAlterarDados() {
 
 function exibirTela2(tela) {
     // Verificar se a tela é a página inicial
-    if (tela === 'perfil-professor') {
-        // Fechar o menu lateral
-        document.getElementById('menu-lateral').classList.add('fechado');
-    }
+
     // Lógica para exibir a tela desejada
 }
 

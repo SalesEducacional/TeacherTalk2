@@ -71,7 +71,7 @@ select {
     /* Inicia fechado */
     width: 250px;
     height: 100%;
-    background-color: #6e6e6e;
+    background-color: #000000;
     transition: left 0.3s ease;
     z-index: 10;
 }
@@ -92,15 +92,16 @@ select {
 }
 
 #menu-lateral2 li button {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
-    background-color: #8f8f8f;
+    background-color: #FFD700;
 }
 
 #menu-lateral2 li button:hover {
     text-decoration: solid;
-    background-color: #000000;
+    background-color: #181818;
     color: #FFD700;
+    border: solid 2px #FFD700;
 }
 
 /* Estilos do menu lateral */
@@ -112,7 +113,7 @@ select {
     /* Inicia fechado */
     width: 250px;
     height: 100%;
-    background-color: #6e6e6e;
+    background-color: #000000;
     transition: left 0.3s ease;
     z-index: 10;
 }
@@ -133,15 +134,16 @@ select {
 }
 
 #menu-lateral li button {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
-    background-color: #8f8f8f;
+    background-color: #FFD700;
 }
 
 #menu-lateral li button:hover {
     text-decoration: solid;
-    background-color: #000000;
+    background-color: #181818;
     color: #FFD700;
+    border: solid 2px #FFD700;
 }
 
 /* Estilos do ícone do menu */
@@ -212,6 +214,7 @@ select {
 #tela-sobre-prof button:hover {
     background-color: #FFD700;
     color: #000000;
+    border: solid 2px #000000;
 }
 
 /* Estilos para a tela Sobre */
@@ -256,6 +259,7 @@ select {
 #tela-sobre-aluno button:hover {
     background-color: #FFD700;
     color: #000000;
+    border: solid 2px #000000;
 }
 
 /* Estilos para a tela de suporte */
@@ -309,6 +313,7 @@ select {
 #tela-suporte button:hover {
     background-color: #FFD700;
     color: #000000;
+    border: solid 2px #000000;
 }
 
 #tela-iniciar-transmissao {
@@ -346,4 +351,5 @@ button {
 button:hover {
     background-color: #FFD700;
     color: #000000;
+    border: solid 2px #000000;
 }
