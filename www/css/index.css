@@ -128,3 +128,100 @@ select {
     background-color: #FFD700;
     color: #000000;
 }
+
+/* Estilos para a tela Sobre */
+#tela-sobre-prof {
+    text-align: justify;
+}
+
+#tela-sobre-prof h1 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#tela-sobre-prof p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#tela-sobre-prof ul {
+    margin-left: 20px;
+}
+
+#tela-sobre-prof li {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#tela-sobre-prof button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #FFD700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#tela-sobre-prof button:hover {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+/* Estilos para a tela de suporte */
+#tela-suporte {
+    text-align: center;
+}
+
+#tela-suporte h1 {
+    color: #333;
+    /* Cor do texto */
+}
+
+#tela-suporte p {
+    color: #666;
+    /* Cor do texto */
+    margin-bottom: 20px;
+    /* Espaçamento inferior */
+}
+
+#tela-suporte ul {
+    list-style: none;
+    /* Remover marcadores de lista */
+    padding: 0;
+    /* Remover o preenchimento padrão */
+}
+
+#tela-suporte ul li {
+    margin-bottom: 10px;
+    /* Espaçamento inferior entre os itens */
+    color: #777;
+    /* Cor do texto */
+}
+
+#tela-suporte button {
+    background-color: #000000;
+    /* Cor de fundo do botão */
+    color: #FFD700;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remover a borda */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Borda arredondada */
+    cursor: pointer;
+    /* Cursor ao passar por cima */
+    transition: background-color 0.3s;
+    /* Transição suave da cor de fundo */
+}
+
+#tela-suporte button:hover {
+    background-color: #FFD700;
+    color: #000000;
+}

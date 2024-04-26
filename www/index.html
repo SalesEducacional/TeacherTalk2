@@ -34,16 +34,6 @@
     </div>
 
     <!-- Tela de Login -->
-    <!-- <div id="tela-login" class="container esconder">
-        <h1>Login</h1>
-        <input type="text" id="matricula" placeholder="Matrícula">
-        <input type="password" id="senha" placeholder="Senha">
-        <label for="lembrar-senha"><input type="checkbox" id="lembrar-senha"> Lembrar Senha</label>
-        <button onclick="simularLogin()">Login</button>
-        <button onclick="openCadastro()">Cadastrar</button>
-        <button onclick="voltarTelaInicial()">Voltar</button>
-    </div> -->
-    <!-- Tela de Login -->
     <div id="tela-login" class="container esconder">
         <h1>Login</h1>
         <input type="text" id="matricula" placeholder="Matrícula">
@@ -89,9 +79,9 @@
         <div id="menu-lateral" class="fechado">
             <ul>
                 <li><button onclick="voltarTelaInicial('tela-inicial')">Página Inicial</button></li>
-                <li><button onclick="exibirTela('tela-mudar-senha')">Alterar Dados</button></li>
-                <li><button onclick="exibirTela('tela-mudar-senha')">Alterar Senha</button></li>
-                <li><button onclick="exibirTela('tela-sobre')">Sobre</button></li>
+                <li><button onclick="abrirTelaAlterarDados()">Alterar Dados</button></li>
+                <li><button onclick="openAlterarSenha()">Alterar Senha</button></li>
+                <li><button onclick="exibirTela('tela-sobre-prof')">Sobre</button></li>
                 <li><button onclick="exibirTela('tela-suporte')">Suporte</button></li>
                 <li><button onclick="voltarTelaInicial()">Sair</button></li>
             </ul>
@@ -150,6 +140,59 @@
         <input type="password" id="senha" placeholder="Senha">
         <input type="password" id="confirmar-senha" placeholder="Confirmar Senha">
         <button onclick="voltarTelaInicial()">Cadastrar</button>
+        <button onclick="voltarTelaInicial()">Voltar</button>
+    </div>
+
+    <!-- Tela de Alteração de Senha -->
+    <div id="tela-alterar-senha" class="container esconder">
+        <h1>Alterar Senha</h1>
+        <input type="password" id="senha-atual" placeholder="Senha Atual">
+        <input type="password" id="nova-senha" placeholder="Nova Senha">
+        <input type="password" id="confirmar-nova-senha" placeholder="Confirmar Nova Senha">
+        <button onclick="alterarSenha()">Salvar Alterações</button>
+        <button onclick="voltarTelaInicial()">Cancelar</button>
+    </div>
+
+    <!-- Tela Sobre -->
+    <div id="tela-sobre-prof" class="container esconder">
+        <h1>Sobre o Teacher Talk</h1>
+        <p>O Teacher Talk é uma plataforma educacional desenvolvida para facilitar a comunicação e colaboração entre
+            professores e alunos.</p>
+        <p>Com o Teacher Talk, os professores podem:</p>
+        <ul>
+            <li>Realizar transmissões ao vivo de aulas</li>
+            <li>Interagir com os alunos em tempo real</li>
+            <li>Compartilhar materiais didáticos</li>
+            <li>Gerenciar o conteúdo do curso</li>
+        </ul>
+        <p>Os alunos podem:</p>
+        <ul>
+            <li>Assistir aulas ao vivo e gravadas</li>
+            <li>Participar de discussões e atividades</li>
+            <li>Acessar materiais de estudo</li>
+            <li>Acompanhar o progresso do curso</li>
+        </ul>
+        <p>O Teacher Talk foi projetado para tornar o ensino e aprendizado mais dinâmicos e interativos, promovendo uma
+            experiência educacional enriquecedora para todos os envolvidos.</p>
+        <button onclick="exibirTela('perfil-professor')">Voltar</button>
+    </div>
+
+    <!-- Tela de Alterar Dados -->
+    <div id="tela-alterar-dados-prof" class="container esconder">
+        <h1>Alterar Dados</h1>
+        <p><b>Funcionalidade em manutenção.</b></p>
+        <button onclick="exibirTela('perfil-professor')">Voltar</button>
+    </div>
+
+    <!-- Tela de Suporte -->
+    <div id="tela-suporte" class="container esconder">
+        <h1>Suporte</h1>
+        <p>Entre em contato conosco para obter suporte:</p>
+        <ul>
+            <li>Email: suporte@teachertalk.com</li>
+            <li>Telefone: (XX) XXXX-XXXX</li>
+            <li>Horário de Atendimento: Segunda a Sexta, 9h às 18h</li>
+        </ul>
         <button onclick="voltarTelaInicial()">Voltar</button>
     </div>
 

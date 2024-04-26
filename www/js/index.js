@@ -112,3 +112,47 @@ function toggleMenu() {
     }
 }
 
+// Função para abrir a tela de alteração de senha
+function openAlterarSenha() {
+    // Esconder todas as outras telas e mostrar a tela de alteração de senha
+    var telas = document.querySelectorAll('.container');
+    for (var i = 0; i < telas.length; i++) {
+        telas[i].classList.add('esconder');
+    }
+    document.getElementById('tela-alterar-senha').classList.remove('esconder');
+}
+
+// Função para alterar a senha
+function alterarSenha() {
+    var senhaAtual = document.getElementById('senha-atual').value;
+    var novaSenha = document.getElementById('nova-senha').value;
+    var confirmarNovaSenha = document.getElementById('confirmar-nova-senha').value;
+
+    // Verificar se a nova senha e a confirmação são iguais
+    if (novaSenha !== confirmarNovaSenha) {
+        alert("A nova senha e a confirmação da senha não coincidem.");
+        return;
+    }
+
+    // Aqui você pode adicionar a lógica para validar a senha atual e fazer a alteração de senha
+    // Por enquanto, apenas exibimos um alerta
+    alert("Senha alterada com sucesso!");
+    // Voltar para a tela inicial após alterar a senha
+    voltarTelaInicial();
+    document.getElementById('tela-alterar-senha').classList.add('esconder');
+}
+
+function exibirTela(idTela) {
+    // Oculta todas as telas, exceto a tela selecionada
+    var telas = document.querySelectorAll('.container');
+    for (var i = 0; i < telas.length; i++) {
+        telas[i].classList.add('esconder');
+    }
+    document.getElementById(idTela).classList.remove('esconder');
+}
+
+function abrirTelaAlterarDados() {
+    exibirTela('tela-alterar-dados-prof');
+}
+
+
