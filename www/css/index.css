@@ -64,6 +64,47 @@ select {
 
 /* Estilos do menu lateral */
 
+#menu-lateral2 {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    /* Inicia fechado */
+    width: 250px;
+    height: 100%;
+    background-color: #6e6e6e;
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+#menu-lateral2 ul {
+    list-style: circle;
+    padding: 0;
+    margin-top: 100px;
+}
+
+#menu-lateral2 li {
+    padding: 10px;
+}
+
+#menu-lateral2 li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu-lateral2 li button {
+    color: #fff;
+    text-decoration: none;
+    background-color: #8f8f8f;
+}
+
+#menu-lateral2 li button:hover {
+    text-decoration: solid;
+    background-color: #000000;
+    color: #FFD700;
+}
+
+/* Estilos do menu lateral */
+
 #menu-lateral {
     position: fixed;
     top: 0;
@@ -173,6 +214,50 @@ select {
     color: #000000;
 }
 
+/* Estilos para a tela Sobre */
+#tela-sobre-aluno {
+    text-align: justify;
+}
+
+#tela-sobre-aluno h1 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#tela-sobre-aluno p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#tela-sobre-aluno ul {
+    margin-left: 20px;
+}
+
+#tela-sobre-aluno li {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#tela-sobre-aluno button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #FFD700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#tela-sobre-aluno button:hover {
+    background-color: #FFD700;
+    color: #000000;
+}
+
 /* Estilos para a tela de suporte */
 #tela-suporte {
     text-align: center;
@@ -222,6 +307,43 @@ select {
 }
 
 #tela-suporte button:hover {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+#tela-iniciar-transmissao {
+    display: none;
+    /* Estilos para posicionar os elementos, ajustar cores, fontes, etc. */
+}
+
+#infoGravacao {
+    margin-top: 20px;
+}
+
+#infoGravacao label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#infoGravacao input,
+#infoGravacao textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
     background-color: #FFD700;
     color: #000000;
 }

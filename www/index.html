@@ -78,7 +78,7 @@
         <!-- Menu lateral -->
         <div id="menu-lateral" class="fechado">
             <ul>
-                <li><button onclick="voltarTelaInicial('tela-inicial')">Página Inicial</button></li>
+                <li><button onclick="exibirTela('perfil-professor')">Página Inicial</button></li>
                 <li><button onclick="abrirTelaAlterarDados()">Alterar Dados</button></li>
                 <li><button onclick="openAlterarSenha()">Alterar Senha</button></li>
                 <li><button onclick="exibirTela('tela-sobre-prof')">Sobre</button></li>
@@ -88,7 +88,7 @@
         </div>
         <!-- Opções do App -->
         <div id="opcoes-app-professor">
-            <button>Iniciar Transmissão</button>
+            <button onclick="exibirTela('tela-iniciar-transmissao')">Iniciar Transmissão</button>
         </div>
 
         <div id="opcoes-app-professor">
@@ -96,32 +96,38 @@
         </div>
 
         <div id="opcoes-app-professor">
-            <button>Conecar Microfone</button>
+            <button>Conectar Microfone</button>
         </div>
-        <div id="opcoes-app-professor">
+        <!--<div id="opcoes-app-professor">
             <button onclick="voltarTelaInicial()">Sair</button>
-        </div>
+        </div>-->
     </div>
 
     <!-- Tela Perfil Aluno -->
     <div id="perfil-aluno" class="container esconder">
+
+        <img id="iconMenu" src="img\menu-icon.png" alt="Menu" onclick="toggleMenu2()">
         <h1>Perfil do Aluno</h1>
         <!-- Dados do aluno -->
         <div id="dados-aluno">
             <!-- Inserir os dados do aluno aqui -->
         </div>
         <!-- Menu Lateral -->
-        <div id="menu-lateral-aluno">
-            <button>Home</button>
-            <button>Alterar Dados</button>
-            <button>Alterar Senha</button>
-            <button>Sobre</button>
-            <button>Supor</button>
-            <button onclick="voltarTelaInicial()">Sair</button>
+        <div id="menu-lateral2" class="fechado">
+            <ul>
+                <li><button onclick="exibirTela('perfil-aluno')">Página Inicial</button></li>
+                <li><button onclick="abrirTelaAlterarDados()">Alterar Dados</button></li>
+                <li><button onclick="openAlterarSenha()">Alterar Senha</button></li>
+                <li><button onclick="exibirTela('tela-sobre-aluno')">Sobre</button></li>
+                <li><button onclick="exibirTela('tela-suporte')">Suporte</button></li>
+                <li><button onclick="voltarTelaInicial()">Sair</button></li>
+            </ul>
         </div>
         <!-- Opções do App -->
         <div id="opcoes-app-aluno">
             <button>Assistir Aula</button>
+        </div>
+        <div id="opcoes-app-aluno">
             <button>Aulas Favoritas</button>
         </div>
     </div>
@@ -177,6 +183,31 @@
         <button onclick="exibirTela('perfil-professor')">Voltar</button>
     </div>
 
+    <!-- Tela Sobre -->
+    <div id="tela-sobre-aluno" class="container esconder">
+        <h1>Sobre o Teacher Talk</h1>
+        <p>O Teacher Talk é uma plataforma educacional desenvolvida para facilitar a comunicação e colaboração entre
+            professores e alunos.</p>
+        <p>Com o Teacher Talk, os professores podem:</p>
+        <ul>
+            <li>Realizar transmissões ao vivo de aulas</li>
+            <li>Interagir com os alunos em tempo real</li>
+            <li>Compartilhar materiais didáticos</li>
+            <li>Gerenciar o conteúdo do curso</li>
+        </ul>
+        <p>Os alunos podem:</p>
+        <ul>
+            <li>Assistir aulas ao vivo e gravadas</li>
+            <li>Participar de discussões e atividades</li>
+            <li>Acessar materiais de estudo</li>
+            <li>Acompanhar o progresso do curso</li>
+        </ul>
+        <p>O Teacher Talk foi projetado para tornar o ensino e aprendizado mais dinâmicos e interativos, promovendo uma
+            experiência educacional enriquecedora para todos os envolvidos.</p>
+        <button onclick="exibirTela('perfil-aluno')">Voltar</button>
+
+    </div>
+
     <!-- Tela de Alterar Dados -->
     <div id="tela-alterar-dados-prof" class="container esconder">
         <h1>Alterar Dados</h1>
@@ -193,7 +224,27 @@
             <li>Telefone: (XX) XXXX-XXXX</li>
             <li>Horário de Atendimento: Segunda a Sexta, 9h às 18h</li>
         </ul>
-        <button onclick="voltarTelaInicial()">Voltar</button>
+        <button onclick="exibirTela('perfil-professor')">Voltar</button>
+    </div>
+
+    <div id="tela-iniciar-transmissao" class="container esconder">
+        <img id="btnVoltarPerfil" src="back.png" alt="Voltar" onclick="voltarParaPerfil()">
+        <h1>Iniciar Transmissão</h1>
+
+        <audio id="audioPlayer" controls></audio>
+
+        <div id="infoGravacao">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" placeholder="Título da transmissão">
+
+            <label for="disciplina">Disciplina:</label>
+            <input type="text" id="disciplina" placeholder="Disciplina da transmissão">
+
+            <label for="conteudo">Conteúdo:</label>
+            <textarea id="conteudo" placeholder="Conteúdo da transmissão"></textarea>
+        </div>
+
+        <button onclick="salvarTransmissao()">Iniciar Transmissão</button>
     </div>
 
 

@@ -91,18 +91,28 @@ function voltarTelaLogin() {
     document.getElementById('tela-login').classList.remove('esconder');
 }
 
-function exibirTela(idTela) {
+/*function exibirTela(idTela) {
     // Oculta todas as telas, exceto a tela selecionada
     var telas = document.querySelectorAll('.container');
     for (var i = 0; i < telas.length; i++) {
         telas[i].style.display = 'none';
     }
     document.getElementById(idTela).style.display = 'block';
-}
+}*/
 
 // Função para abrir ou fechar o menu
 function toggleMenu() {
     var menu = document.getElementById("menu-lateral");
+    if (menu.classList.contains("fechado")) {
+        menu.style.left = "0";
+        menu.classList.remove("fechado");
+    } else {
+        menu.style.left = "-250px";
+        menu.classList.add("fechado");
+    }
+}
+function toggleMenu2() {
+    var menu = document.getElementById("menu-lateral2");
     if (menu.classList.contains("fechado")) {
         menu.style.left = "0";
         menu.classList.remove("fechado");
@@ -155,4 +165,41 @@ function abrirTelaAlterarDados() {
     exibirTela('tela-alterar-dados-prof');
 }
 
+/*window.onload = function () {
+    var menuLateral = document.getElementById('menu-lateral');
+    menuLateral.classList.add('fechado');
+};*/
 
+function exibirTela2(tela) {
+    // Verificar se a tela é a página inicial
+    if (tela === 'perfil-professor') {
+        // Fechar o menu lateral
+        document.getElementById('menu-lateral').classList.add('fechado');
+    }
+    // Lógica para exibir a tela desejada
+}
+
+// Função para exibir a tela de iniciar transmissão
+function exibirTelaIniciarTransmissao() {
+    document.getElementById('tela-iniciar-transmissao').style.display = 'block';
+}
+
+// Função para voltar para a tela de perfil do professor
+function voltarParaPerfil() {
+    document.getElementById('tela-iniciar-transmissao').style.display = 'none';
+}
+
+// Função para salvar a transmissão
+function salvarTransmissao() {
+    // Coletar informações inseridas pelo usuário
+    var titulo = document.getElementById('titulo').value;
+    var disciplina = document.getElementById('disciplina').value;
+    var conteudo = document.getElementById('conteudo').value;
+
+    // Aqui você pode implementar a lógica para salvar a transmissão, por exemplo:
+    // - Enviar os dados para o servidor
+    // - Exibir uma notificação de sucesso
+    // - Redirecionar para a tela de perfil do professor
+    alert('Transmissão salva com sucesso!');
+    voltarParaPerfil();
+}
